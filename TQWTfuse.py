@@ -68,7 +68,7 @@ def SFB(V0, V1, N):
     Y0[1:P+1] = V0[1:P+1]
     Y0[N-P:N] = V0[N0-P:N0]
     Y0[P+1:P+T+1] = V0[P+1:P+T+1]*th[1:T+1]
-    Y0[N-P-T:N-P] = V0[N0-P-T:N0-P]*th[1:T+1]
+    Y0[N-P-T:N-P] = V0[N0-P-T:N0-P]*th[T:0:-1]
     Y0[N/2] = 0
     # High pass sub-band
     Y1[0] = 0 # already 0 though
